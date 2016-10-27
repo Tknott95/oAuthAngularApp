@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RouterModule } from '@angular/router';
+import {AUTH_PROVIDERS} from 'angular2-jwt';
+
+import {Auth} from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,7 @@ import { RouterModule } from '@angular/router';
   }
     ])
   ],
-  providers: [],
+  providers: [AUTH_PROVIDERS, Auth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
