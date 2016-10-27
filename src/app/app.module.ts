@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import {AUTH_PROVIDERS} from 'angular2-jwt';
 
 import {Auth} from './services/auth.service';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import {Auth} from './services/auth.service';
   }
     ])
   ],
-  providers: [AUTH_PROVIDERS, Auth],
+  providers: [AUTH_PROVIDERS, Auth, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
