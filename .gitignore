@@ -34,5 +34,5 @@ Thumbs.db
 
 
 # services
-/src/app/services/*.ts
+/src/app/services
 
