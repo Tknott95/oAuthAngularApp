@@ -9,7 +9,12 @@ import { Auth } from '../services/auth.service';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private auth: Auth) { }
+  profile: any;
+
+  constructor(private auth: Auth) { 
+    this.profile = JSON.parse(localStorage.getItem('profile'));
+    console.log(this.profile);
+  }
 
   ngOnInit() {
   }
